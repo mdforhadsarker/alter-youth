@@ -23,16 +23,16 @@ const Navbar = ({ toggleSidebar }: { toggleSidebar: () => void }) => {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all p-4 ${
-        isScrolled ? "bg-white text-[#1dc468]" : "bg-transparent text-white"
+      className={`fixed top-0 left-0 w-full z-50 transition-all py-3 ${
+        isScrolled ? "bg-white text-[#1dc468] shadow-md" : "bg-transparent text-white"
       }`}
     >
       <div className="max-w-screen-xl mx-auto flex justify-between items-center">
         {/* Left side with hamburger icon and logo */}
-        <div className="flex space-x-5 items-center">
+        <div className="flex items-center gap-2">
           <button
             onClick={toggleSidebar}
-            className={`text-3xl focus:outline-none ${
+            className={`text-xl focus:outline-none ${
               isScrolled ? "text-[#1dc468]" : "text-white"
             }`}
           >
@@ -51,7 +51,7 @@ const Navbar = ({ toggleSidebar }: { toggleSidebar: () => void }) => {
         </div>
 
         {/* Right side nav items */}
-        <nav className="flex space-x-4">
+        <nav className="flex flex-row gap-4">
           <Link
             href="/about"
             className={`${

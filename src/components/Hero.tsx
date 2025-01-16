@@ -19,10 +19,10 @@ const Hero: FC = () => {
       <div className="relative z-10 flex flex-row max-w-screen-xl mx-auto justify-between items-center h-full text-center text-white px-20">
         <div className="flex flex-col w-96 text-left">
           <h1 className="text-6xl font-bold mb-4 ">Start your scholarship</h1>
-          <p className="text-lg mb-6">
+          <h3 className="text-lg mb-6">
             Directly for students in Government Primary Schools throughout
             Bangladesh
-          </p>
+          </h3>
         </div>
         <Card />
       </div>

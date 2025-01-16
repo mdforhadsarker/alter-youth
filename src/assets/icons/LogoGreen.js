@@ -3,8 +3,8 @@ import React from "react";
 const LogoGreen = () => {
   return (
     <svg
-      width="248"
-      height="50"
+      width="220"
+      height="40"
       viewBox="0 0 248 50"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
