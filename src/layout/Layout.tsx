@@ -17,7 +17,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     <div className="relative min-h-screen bg-gray-100">
       <Navbar toggleSidebar={toggleSidebar} />
       <Sidebar isOpen={isSidebarOpen} closeSidebar={closeSidebar} />
-      <main className="p-6">{children}</main>
+      <main>{children}</main>
     </div>
   );
 };
