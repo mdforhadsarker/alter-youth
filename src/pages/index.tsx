@@ -1,10 +1,8 @@
-import Link from "next/link";
-
 const Home = () => {
   return (
     <>
-      <h1>Home Page</h1>
-      <Link href="/about">Go to About Us</Link>
+      <h1 className="text-3xl font-bold">Welcome to the Home Page</h1>
+      <p className="mt-4">This is the content of the homepage.</p>
     </>
   );
 };
