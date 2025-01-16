@@ -1,6 +1,12 @@
+import Link from "next/link";
 
-export default function Home() {
+const Home = () => {
   return (
-  <h1>Welcome to AlterYouth</h1>
+    <>
+      <h1>Home Page</h1>
+      <Link href="/about">Go to About Us</Link>
+    </>
   );
-}
+};
+
+export default Home;
