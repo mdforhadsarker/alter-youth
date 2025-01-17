@@ -43,32 +43,37 @@ const CommunityImpactSlider = () => {
     image18,
   ];
 
+  const imagesPerSlide = 4;
+  const totalSlides = Math.ceil(images.length / imagesPerSlide);
+
   const handlePrev = () => {
-    setCurrentSlide((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+    setCurrentSlide((prev) => (prev === 0 ? totalSlides - 1 : prev - 1));
   };
 
   const handleNext = () => {
-    setCurrentSlide((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+    setCurrentSlide((prev) => (prev === totalSlides - 1 ? 0 : prev + 1));
+  };
+
+  const getCurrentImages = () => {
+    const startIndex = currentSlide * imagesPerSlide;
+    const currentImages = images.slice(startIndex, startIndex + imagesPerSlide);
+    if (currentImages.length < imagesPerSlide) {
+      const remaining = imagesPerSlide - currentImages.length;
+      return [...currentImages, ...images.slice(-remaining)];
+    }
+
+    return currentImages;
   };
 
   return (
     <div className="relative overflow-hidden mx-auto max-w-screen z-10 mt-5">
-      <div
-        className="relative w-full h-96 z-1 flex transition-transform"
-        style={{
-          transform: `translateX(-${currentSlide * 100}%)`,
-          transition: "transform 0.5s ease-in-out",
-        }}
-      >
-        {images.map((image, index) => (
-          <div key={index} className="relative w-96 h-full">
+      <div className="grid grid-cols-4 gap-0 transition-transform duration-800 ease-in-out">
+        {getCurrentImages().map((image, index) => (
+          <div key={index} className="w-full h-full">
             <Image
               src={image}
               alt={`Slide ${index + 1}`}
-              fill
-              style={{ objectFit: "cover" }}
-              priority={index === currentSlide}
-              sizes="(max-width: 768px) 100vw, (min-width: 769px) 50vw"
+              className="w-full h-full object-cover"
             />
           </div>
         ))}
@@ -76,7 +81,7 @@ const CommunityImpactSlider = () => {
 
       <button
         onClick={handlePrev}
-        className="absolute top-1/2 left-2 transform -translate-y-1/2 bg-white text-white p-2 rounded-full "
+        className="absolute top-1/2 left-20 transform -translate-y-1/2 bg-white text-white p-2 rounded-full "
       >
         <svg
           width="12"
@@ -95,7 +100,7 @@ const CommunityImpactSlider = () => {
 
       <button
         onClick={handleNext}
-        className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-white text-white p-2 rounded-full "
+        className="absolute top-1/2 right-20 transform -translate-y-1/2 bg-white text-white p-2 rounded-full "
       >
         <svg
           width="12"
