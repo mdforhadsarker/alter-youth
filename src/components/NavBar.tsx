@@ -24,7 +24,9 @@ const Navbar = ({ toggleSidebar }: { toggleSidebar: () => void }) => {
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all py-3 ${
-        isScrolled ? "bg-white text-[#1dc468] shadow-md" : "bg-transparent text-white"
+        isScrolled
+          ? "bg-white text-[#1dc468] shadow-md"
+          : "bg-transparent text-white"
       }`}
     >
       <div className="max-w-screen-xl mx-auto flex justify-between items-center">
@@ -52,46 +54,23 @@ const Navbar = ({ toggleSidebar }: { toggleSidebar: () => void }) => {
 
         {/* Right side nav items */}
         <nav className="flex flex-row gap-4">
-          <Link
-            href="/about"
-            className={`${
-              isScrolled ? "text-[#1dc468]" : "text-white"
-            } font-semibold`}
-          >
-            About
-          </Link>
-          <Link
-            href="/how-it-works"
-            className={`${
-              isScrolled ? "text-[#1dc468]" : "text-white"
-            } font-semibold`}
-          >
-            How it works
-          </Link>
-          <Link
-            href="/scholarships"
-            className={`${
-              isScrolled ? "text-[#1dc468]" : "text-white"
-            } font-semibold`}
-          >
-            Scholarships
-          </Link>
-          <Link
-            href="/collaborate"
-            className={`${
-              isScrolled ? "text-[#1dc468]" : "text-white"
-            } font-semibold`}
-          >
-            Collaborate
-          </Link>
-          <Link
-            href="/login"
-            className={`${
-              isScrolled ? "text-[#1dc468]" : "text-white"
-            } font-semibold`}
-          >
-            Login
-          </Link>
+          {[
+            "about",
+            "how-it-works",
+            "scholarships",
+            "collaborate",
+            "login",
+          ].map((path) => (
+            <Link
+              key={path}
+              href={`/${path}`}
+              className={`relative font-semibold transition-colors ${
+                isScrolled ? "text-[#1dc468]" : "text-white"
+              } custom-hover-underline`}
+            >
+              {path.replace("-", " ").replace(/^\w/, (c) => c.toUpperCase())}
+            </Link>
+          ))}
         </nav>
       </div>
     </header>
