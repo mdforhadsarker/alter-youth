@@ -59,7 +59,7 @@ const ScholarshipCommunityCard: React.FC<ScholarshipCommunityCardProps> = ({
       </div>
 
       <div className="mb-4">
-        <h1 className="bg-green-200 text-green-800 rounded-full px-2 py-1 text-xs max-w-max">
+        <h1 className="bg-[rgba(29,196,104,.06)] text-green-600 rounded-full px-2 py-1 text-xs max-w-max ">
           {count} Scholarship{count > 1 ? "s" : ""}
         </h1>
       </div>

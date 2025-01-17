@@ -14,11 +14,11 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   };
 
   return (
-    <div className="relative min-h-screen bg-gray-100">
+    <>
       <Navbar toggleSidebar={toggleSidebar} />
       <Sidebar isOpen={isSidebarOpen} closeSidebar={closeSidebar} />
       <main>{children}</main>
-    </div>
+    </>
   );
 };
 

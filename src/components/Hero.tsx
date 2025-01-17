@@ -10,8 +10,8 @@ const Hero: FC = () => {
         <Image
           src={HeroImage}
           alt="Hero Background"
-          layout="fill"
-          objectFit="cover"
+          fill
+          style={{ objectFit: "cover" }}
           quality={100}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black opacity-40" />
