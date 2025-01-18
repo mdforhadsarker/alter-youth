@@ -11,7 +11,6 @@ import image4 from "../assets/images/school4.jpeg";
 import image5 from "../assets/images/school5.jpeg";
 import image6 from "../assets/images/school6.jpeg";
 import image7 from "../assets/images/school7.jpeg";
-import { Navigation, Pagination } from "swiper/modules";
 
 const schoolData = [
   {
