@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 interface SidebarProps {
@@ -21,13 +22,13 @@ const Sidebar = ({ isOpen, closeSidebar }: SidebarProps) => {
         <h2 className="text-xl font-bold mb-4">Sidebar</h2>
         <ul>
           <li className="mb-2">
-            <a href="/">Home</a>
+            <Link href="/">Home</Link>
           </li>
           <li className="mb-2">
-            <a href="/about">About</a>
+            <Link href="/about">About</Link>
           </li>
           <li className="mb-2">
-            <a href="/contact">Contact</a>
+            <Link href="/contact">Contact</Link>
           </li>
         </ul>
       </div>

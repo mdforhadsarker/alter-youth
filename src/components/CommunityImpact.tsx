@@ -11,7 +11,7 @@ const CommunityImpact = () => {
         <p className="hidden lg:block px-4">
           Every scholarship begins with shipping a mobile phone to the parent of
           the student. Then they create their own mobile bank account <br />
-          using that phone, to start receiving their child's scholarships
+          using that phone, to start receiving their child&apos;s scholarships
           directly, every month.
         </p>
       </div>
@@ -20,7 +20,8 @@ const CommunityImpact = () => {
       <p className="block lg:hidden px-4">
         Every scholarship begins with shipping a mobile phone to the parent of
         the student. Then they create their own mobile bank account using that
-        phone, to start receiving their child's scholarships directly, every
+        using that phone, to start receiving their child&apos;s scholarships
+        phone, to start receiving their childs scholarships directly, every
         month.
       </p>
     </section>

@@ -3,7 +3,7 @@ import ScholarshipCommunity from "@/components/ScholarshipCommunity";
 import UberScholarship from "@/components/UberScholarship";
 import Link from "next/link";
 
-const About = ({ pageTitle }: { pageTitle: string }) => {
+const About = () => {
   return (
     <>
       <Hero />
