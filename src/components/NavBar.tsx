@@ -30,8 +30,8 @@ const Navbar = ({ toggleSidebar }: { toggleSidebar: () => void }) => {
       }`}
     >
       <div className="max-w-screen-xl mx-auto flex justify-between items-center">
-        {/* Left side with hamburger icon and logo */}
-        <div className="flex items-center gap-2">
+        {/* Left side with hamburger icon */}
+        <div className="flex items-center gap-2 ml-10 ">
           <button
             onClick={toggleSidebar}
             className={`text-xl focus:outline-none ${
@@ -40,20 +40,22 @@ const Navbar = ({ toggleSidebar }: { toggleSidebar: () => void }) => {
           >
             &#9776;
           </button>
-          {isScrolled ? (
-            <Link href="/">
-              <LogoGreen />
-            </Link>
-          ) : (
-            <Link href="/">
-              {" "}
-              <LogoWhite />
-            </Link>
-          )}
+          {/* Centered logo */}
+          <div className="flex justify-center absolute left-0 right-0 md:relative">
+            {isScrolled ? (
+              <Link href="/">
+                <LogoGreen />
+              </Link>
+            ) : (
+              <Link href="/">
+                <LogoWhite />
+              </Link>
+            )}
+          </div>
         </div>
 
         {/* Right side nav items */}
-        <nav className="flex flex-row gap-4">
+        <nav className="flex flex-row gap-4 hidden md:flex">
           {[
             "about",
             "how-it-works",

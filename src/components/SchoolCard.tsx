@@ -16,8 +16,15 @@ const SchoolCard: React.FC<SchoolCardProps> = ({
 }) => {
   return (
     <div className="rounded-lg transition-shadow duration-300">
-      <div className="relative w-96 h-full cursor-pointer overflow-hidden rounded-lg ">
-        <Image src={image} alt={ht_quote} width={500} height={500} priority />
+      <div className="relative w-full h-full cursor-pointer overflow-hidden rounded-lg ">
+        <Image
+          src={image}
+          alt={ht_quote}
+          width={500}
+          height={500}
+          priority
+          className="w-full"
+        />
       </div>
       <h1 className="mt-2 text-md font-bold text-gray-800">{school_name}</h1>
       <div className="flex items-center mt-2 text-sm text-gray-600">

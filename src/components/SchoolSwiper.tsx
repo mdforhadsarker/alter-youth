@@ -11,6 +11,7 @@ import image4 from "../assets/images/school4.jpeg";
 import image5 from "../assets/images/school5.jpeg";
 import image6 from "../assets/images/school6.jpeg";
 import image7 from "../assets/images/school7.jpeg";
+import { Navigation, Pagination } from "swiper/modules";
 
 const schoolData = [
   {
@@ -77,14 +78,15 @@ const SchoolSwiper: React.FC = () => {
       </h2>
       <Swiper
         modules={[]}
-        spaceBetween={100}
+        spaceBetween={20}
         slidesPerView={5}
         loop={true}
         pagination={{ clickable: true }}
         breakpoints={{
           320: { slidesPerView: 2 },
           640: { slidesPerView: 3 },
-          1024: { slidesPerView: 5 },
+          820: { slidesPerView: 5 },
+        
         }}
       >
         {schoolData.map((school, index) =>

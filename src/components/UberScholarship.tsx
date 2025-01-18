@@ -42,7 +42,7 @@ const UberScholarship = () => {
           </div>
         </div>
 
-        <div className="flex flex-col sm:flex-row sm:justify-between gap-5 mt-8 mb-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-5 items-center">
           <MobileCard
             image={firstImage}
             title="Transfer directly"

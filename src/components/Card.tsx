@@ -14,12 +14,11 @@ const Card = () => {
   };
 
   return (
-    <div className="bg-white rounded-lg p-5 shadow-lg w-1/3">
+    <div className="bg-white rounded-lg p-5 shadow-lg w-full sm:w-80 md:w-96 lg:w-[400px]">
       <h1 className="text-black font-bold text-lg mb-6 text-left">
         Join the <span className="text-[#1dc468]">#alteryouthrevolution</span>
       </h1>
 
-      {/* Input fields */}
       <form className="space-y-4">
         <div>
           <input
@@ -39,7 +38,6 @@ const Card = () => {
 
         <div>
           <div className="flex items-center border border-gray-300 rounded-lg overflow-hidden focus-within:ring-2 focus-within:ring-[#1dc468]">
-            {/* Country Code Select */}
             <select
               value={countryCode}
               onChange={(e) => setCountryCode(e.target.value)}
@@ -50,11 +48,7 @@ const Card = () => {
               <option value="+1">🇺🇸 +1</option>
               <option value="+44">🇬🇧 +44</option>
             </select>
-
-            {/* Divider */}
             <span className="border-l border-gray-300 h-full"></span>
-
-            {/* Phone Number Input */}
             <input
               type="tel"
               placeholder="Your number"
@@ -70,8 +64,7 @@ const Card = () => {
           Number of Scholarships
         </label>
         <div className="flex justify-between">
-          {/* Decrease button */}
-          <div className="flex items-center space-x-4 bg-[#f3f4f6] rounded-lg ">
+          <div className="flex items-center space-x-4 bg-[#f3f4f6] rounded-lg">
             <button
               onClick={decrementScholarships}
               type="button"
@@ -94,7 +87,7 @@ const Card = () => {
             <span className="text-lg font-medium text-black text-md">
               {scholarships}
             </span>
-            {/* Increase button */}
+
             <button
               onClick={incrementScholarships}
               type="button"

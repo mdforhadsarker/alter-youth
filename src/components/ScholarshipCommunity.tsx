@@ -10,7 +10,7 @@ const ScholarshipCommunity = () => {
   };
 
   return (
-    <section className=" bg-white flex flex-col justify-between items-center">
+    <section className=" bg-white flex flex-col justify-between items-center px-6">
       <div className="max-w-screen-xl mx-auto mt-10">
         <h2 className="text-2xl font-medium text-[#1dc468] text-center">
           #alteryouthrevolution
@@ -20,13 +20,11 @@ const ScholarshipCommunity = () => {
         </h1>
 
         <p className="text-center mb-2 mt-3">
-          Despite public primary schools being free of cost in Bangladesh,
-          <br />
-          many students still <strong>drop out of school</strong>
-          to work and earn in order to support their families.
-          <br />
-          Your scholarship helps a child attend school and support their
-          families at the same time.
+          Despite public primary schools being free of cost in Bangladesh, many
+          students still <span className="font-bold">drop out of school</span>
+          to work and earn in order to support their families. Your scholarship
+          helps a child attend school and support their families at the same
+          time.
         </p>
 
         <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-auto">
