@@ -2,6 +2,7 @@ import Hero from "../components/Hero";
 import UberScholarship from "@/components/UberScholarship";
 import ScholarshipCommunity from "@/components/ScholarshipCommunity";
 import CommunityImpact from "@/components/CommunityImpact";
+import SchoolSwiper from "@/components/SchoolSwiper";
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       <UberScholarship />
       <ScholarshipCommunity />
       <CommunityImpact />
+      <SchoolSwiper />
     </>
   );
 };
