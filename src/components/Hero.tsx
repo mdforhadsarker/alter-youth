@@ -12,7 +12,7 @@ const Hero: FC = () => {
           alt="Hero Background"
           fill
           style={{ objectFit: "cover" }}
-          quality={100}
+          priority
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black opacity-40" />
       </div>

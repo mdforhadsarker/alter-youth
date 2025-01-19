@@ -23,7 +23,7 @@ const Modal: React.FC<ModalProps> = ({
         transition: "opacity 0.3s ease, transform 0.3s ease",
       }}
     >
-      <div className="w-full flex justify-center items-end">
+      <div className="w-full flex justify-center items-end md:pb-24">
         <div className="w-full max-w-2xl">
           <div className="flex flex-col w-full md:rounded-2xl rounded-t-2xl ">
             <div className="w-full h-full overflow-hidden relative">
