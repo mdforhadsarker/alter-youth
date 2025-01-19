@@ -1,10 +1,12 @@
-import { FacebookOutlined, InstagramOutlined } from "@ant-design/icons";
 import Link from "next/link";
+import Facebook from "../assets/icons/facebook.svg";
+import Instagram from "../assets/icons/Instagram.svg";
+import Image from "next/image";
 
 const Footer = () => {
   return (
     <footer className="bg-[#f9f9f9] py-6 mt-10">
-      <div className="max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row justify-between sm:items-end">
+      <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between sm:items-end  px-4 lg:px-0">
         <div>
           <h4 className="font-semibold mb-2">Learn About AlterYouth</h4>
           <ul className="space-y-1 text-sm">
@@ -31,7 +33,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="max-w-screen-xl mx-auto px-4 mt-4 flex justify-between items-center border-t pt-4">
+      <div className="max-w-screen-xl mx-auto mt-4 flex justify-between items-center border-t pt-4 px-4 lg:px-0">
         <div className="flex flex-col">
           <p className="text-sm">© 2025 AlterYouth Limited</p>
           <div className="flex gap-1">
@@ -51,12 +53,26 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="flex space-x-4">
-          <Link href="https://facebook.com" target="_blank">
-            <FacebookOutlined />
+        <div className="flex space-x-2">
+          <Link href="/#" target="_blank">
+            <Image
+              src={Facebook}
+              alt="facebook"
+              width={500}
+              height={500}
+              priority
+              className="w-4 h-4"
+            />
           </Link>
-          <Link href="https://instagram.com" target="_blank">
-            <InstagramOutlined />
+          <Link href="/#" target="_blank">
+            <Image
+              src={Instagram}
+              alt="instagram"
+              width={500}
+              height={500}
+              priority
+              className="w-4 h-4"
+            />
           </Link>
         </div>
       </div>

@@ -55,7 +55,7 @@ const Navbar = ({ toggleSidebar }: { toggleSidebar: () => void }) => {
         </div>
 
         {/* Right side nav items */}
-        <nav className="flex flex-row gap-4 hidden md:flex">
+        <nav className="flex flex-row gap-4 md:flex">
           {[
             "about",
             "how-it-works",
