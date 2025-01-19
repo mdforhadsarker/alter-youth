@@ -23,3 +23,15 @@
     width: 100%;
   }
 }
+
+/* Global CSS to hide the scrollbar */
+html,
+body {
+  overflow-y: scroll; /* Ensures space for the scrollbar */
+  scrollbar-width: none; /* Firefox */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
