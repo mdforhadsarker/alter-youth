@@ -14,12 +14,13 @@ const Card = () => {
   };
 
   return (
-    <div className="bg-white rounded-lg p-5 shadow-lg w-full sm:w-80 md:w-96 lg:w-[400px]">
+    <div className="bg-white rounded-lg p-6 shadow-lg w-full sm:max-w-md md:max-w-lg lg:max-w-xl mx-auto">
       <h1 className="text-black font-bold text-lg mb-6 text-left">
         Join the <span className="text-[#1dc468]">#alteryouthrevolution</span>
       </h1>
 
       <form className="space-y-4">
+        {/* Name Input */}
         <div>
           <input
             type="text"
@@ -28,6 +29,7 @@ const Card = () => {
           />
         </div>
 
+        {/* Email Input */}
         <div>
           <input
             type="email"
@@ -36,12 +38,13 @@ const Card = () => {
           />
         </div>
 
+        {/* Phone Input */}
         <div>
           <div className="flex items-center border border-gray-300 rounded-lg overflow-hidden focus-within:ring-2 focus-within:ring-[#1dc468]">
             <select
               value={countryCode}
               onChange={(e) => setCountryCode(e.target.value)}
-              className="cursor-pointer bg-transparent px-3 py-3 text-gray-700  outline-none"
+              className="cursor-pointer bg-transparent px-3 py-3 text-gray-700 outline-none"
             >
               <option value="+880">🇧🇩 +880</option>
               <option value="+91">🇮🇳 +91</option>
@@ -52,73 +55,49 @@ const Card = () => {
             <input
               type="tel"
               placeholder="Your number"
-              className="flex-1 py-2 text-gray-700 outline-none"
+              className="flex-1 py-3 px-3 text-gray-700 outline-none"
             />
           </div>
         </div>
       </form>
 
-      {/* Scholarship controls */}
-      <div className="mt-6 text-left">
-        <label className="block text-black font-medium mb-2">
+      {/* Scholarship Controls */}
+      <div className="mt-6 ">
+        <label className="block text-black font-medium mb-2 items-start">
           Number of Scholarships
         </label>
-        <div className="flex justify-between">
-          <div className="flex items-center space-x-4 bg-[#f3f4f6] rounded-lg">
+        <div className="flex items-center justify-between gap-4">
+          {/* Increment/Decrement Buttons */}
+          <div className="flex items-center bg-gray-100 rounded-lg">
             <button
               onClick={decrementScholarships}
               type="button"
-              className="px-4 py-4 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-[#1dc468]"
+              className="px-4 py-2 bg-gray-200 text-gray-700 rounded-l-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-[#1dc468]"
             >
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 36 36"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M32.4646 16.4751H3.53602C3.35923 16.4751 3.21459 16.6197 3.21459 16.7965V19.2072C3.21459 19.384 3.35923 19.5287 3.53602 19.5287H32.4646C32.6414 19.5287 32.786 19.384 32.786 19.2072V16.7965C32.786 16.6197 32.6414 16.4751 32.4646 16.4751Z"
-                  fill="black"
-                  fillOpacity="0.85"
-                />
-              </svg>
+              −
             </button>
-            <span className="text-lg font-medium text-black text-md">
+            <span className="px-6 py-2 text-lg font-medium text-black">
               {scholarships}
             </span>
-
             <button
               onClick={incrementScholarships}
               type="button"
-              className="px-4 py-4 bg-[#1dc468] text-white rounded-lg hover:bg-[#17b957] focus:outline-none focus:ring-2 focus:ring-[#1dc468]"
+              className="px-4 py-2 bg-[#1dc468] text-white rounded-r-lg hover:bg-[#17b957] focus:outline-none focus:ring-2 focus:ring-[#1dc468]"
             >
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 36 36"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M19.205 3.5376H16.7943C16.58 3.5376 16.4729 3.64474 16.4729 3.85903V16.4751H4.50063C4.28634 16.4751 4.1792 16.5822 4.1792 16.7965V19.2072C4.1792 19.4215 4.28634 19.5287 4.50063 19.5287H16.4729V32.1447C16.4729 32.359 16.58 32.4662 16.7943 32.4662H19.205C19.4193 32.4662 19.5265 32.359 19.5265 32.1447V19.5287H31.5006C31.7149 19.5287 31.8221 19.4215 31.8221 19.2072V16.7965C31.8221 16.5822 31.7149 16.4751 31.5006 16.4751H19.5265V3.85903C19.5265 3.64474 19.4193 3.5376 19.205 3.5376Z"
-                  fill="black"
-                  fillOpacity="0.85"
-                />
-              </svg>
+              +
             </button>
           </div>
 
-          {/* Total amount */}
-          <div className="mt-4 text-black font-bold text-2xl">
+          {/* Total Amount */}
+          <div className="text-black font-bold text-lg">
             BDT {`${(scholarships * scholarshipPrice).toLocaleString()}`}
-            <span className="text-sm">/month</span>
+            <span className="text-sm"> /month</span>
           </div>
         </div>
       </div>
 
-      {/* Start Now button */}
-      <div className="mt-6">
+      {/* Start Now Button */}
+      <div className="mt-8">
         <button
           type="button"
           className="w-full px-4 py-3 bg-[#1dc468] text-white rounded-lg text-md font-bold hover:bg-[#17b957] focus:outline-none focus:ring-4 focus:ring-[#1dc468] uppercase"

@@ -14,6 +14,7 @@ const Hero: FC = () => {
           fill
           className="object-cover md:hidden"
           priority
+          sizes="(max-width: 768px) 100vw"
         />
         <Image
           src={HeroImageDesktop}
@@ -21,6 +22,7 @@ const Hero: FC = () => {
           fill
           className="hidden md:block object-cover"
           priority
+          sizes="(min-width: 769px) 100vw"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black opacity-40" />
       </div>
