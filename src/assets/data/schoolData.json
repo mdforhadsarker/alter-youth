@@ -1,0 +1,94 @@
+[
+    {
+      "id": 1,
+      "image": "/images/school1.jpeg",
+      "ht_quote": "There is no alternate way to success other than education",
+      "school_name": "Agla Government Primary School",
+      "location": "Kayetpara",
+      "scholarshipCount": 15,
+      "description": "A school that provides quality education to underprivileged children.",
+      "teacherName": "Rina Begum",
+      "teacherImage":"/images/ht1.jpeg",
+      "teacherRole": "Head Teacher",
+      "quote": "Education is the key to success in life."
+    },
+    {
+      "id": 2,
+      "image": "/images/school2.jpeg",
+      "ht_quote": "Be a wonderful role model because you will be the window through which many children will see their future",
+      "school_name": "Kanchan Government Primary School",
+      "location": "Kanchan",
+      "scholarshipCount": 10,
+      "description": "Founded in 1995, it has been providing free education for the community.",
+      "teacherName": "Md. Shahinur Rahman",
+      "teacherImage":"/images/ht2.jpeg",
+      "teacherRole": "Class Teacher",
+      "quote": "A good teacher is like a candle – it consumes itself to light the way for others."
+    },
+    {
+      "id": 3,
+      "image": "/images/school3.jpeg",
+      "ht_quote": "Live as if you were to die tomorrow. Learn as if you were to live forever.",
+      "school_name": "Daudpur Government Primary School",
+      "location": "Daudpur",
+      "scholarshipCount": 20,
+      "description": "Dedicated to fostering education and developing future leaders.",
+      "teacherName": "Samsun Nahar",
+      "teacherImage":"/images/ht3.jpeg",
+      "teacherRole": "Senior Teacher",
+      "quote": "The future belongs to those who believe in the beauty of their dreams."
+    },
+    {
+      "id": 4,
+      "image": "/images/school4.jpeg",
+      "ht_quote": "Education is the best weapon you can use to change the world",
+      "school_name": "Kendua Government Primary School",
+      "location": "Golakandail",
+      "scholarshipCount": 8,
+      "description": "Empowering children to overcome obstacles and pursue their dreams.",
+      "teacherName": "Safiur Rahman",
+      "teacherImage":"/images/ht4.jpeg",
+      "teacherRole": "Principal",
+      "quote": "The only way to do great work is to love what you do."
+    },
+    {
+      "id": 5,
+      "image": "/images/school5.jpeg",
+      "ht_quote": "The pen is mightier than the sword",
+      "school_name": "Bhulta Government Primary School",
+      "location": "Daudpur",
+      "scholarshipCount": 5,
+      "description": "Committed to bringing change in society through education.",
+      "teacherName": "Rafiqul Islam",
+      "teacherImage":"/images/ht5.jpeg",
+      "teacherRole": "Math Teacher",
+      "quote": "In the classroom, the teacher is the architect of the future."
+    },
+    {
+      "id": 6,
+      "image": "/images/school6.jpeg",
+      "ht_quote": "A teacher's influence never stops, it goes on till the day you die",
+      "school_name": "Deboi Government Primary School",
+      "location": "Rupganj",
+      "scholarshipCount": 11,
+      "description": "Established in 1992 in Rupganj, Bangladesh. It now hosts 24 students taught by 2 teachers.",
+      "teacherName": "Dipa Das",
+      "teacherImage":"/images/ht6.jpeg",
+      "teacherRole": "Class Teacher",
+      "quote": "A teacher's influence never stops, it goes on till the day you die."
+    },
+    {
+      "id": 7,
+      "image": "/images/school7.jpeg",
+      "ht_quote": "A good education can change anyone. A good teacher can change everything.",
+      "school_name": "Daudpur Government Primary School",
+      "location": "Bholabo",
+      "scholarshipCount": 12,
+      "description": "Dedicated to shaping the future of its students through quality teaching.",
+      "teacherName": "Md. Nizamuddin",
+      "teacherImage":"/images/ht7.jpeg",
+      "teacherRole": "Senior Teacher",
+      "quote": "The roots of education are bitter, but the fruit is sweet."
+    }
+  ]
+  

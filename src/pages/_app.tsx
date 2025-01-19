@@ -23,8 +23,8 @@ export default function App({ Component, pageProps }: AppProps) {
     <Layout>
       <Head>
         <title>{getDynamicTitle()}</title>
-      </Head>{" "}
-      <Component {...pageProps} />;
+      </Head>
+      <Component {...pageProps} />
     </Layout>
   );
 }

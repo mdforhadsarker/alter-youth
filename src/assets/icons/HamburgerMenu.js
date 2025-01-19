@@ -64,7 +64,7 @@ const HamburgerMenu = ({ isScrolled, isSidebarOpen, handleMenuClick }) => {
         ></div>
       </div>
 
-      {/* Desktop Hamburger icon (without transition) */}
+      {/* Desktop Hamburger icon (no transition) */}
       <div
         className={`hamburger-react ${
           isSidebarOpen ? "open" : ""
@@ -75,6 +75,7 @@ const HamburgerMenu = ({ isScrolled, isSidebarOpen, handleMenuClick }) => {
           cursor: "pointer",
           height: "36px",
           position: "relative",
+
           transition: "none",
           userSelect: "none",
           width: "36px",

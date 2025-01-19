@@ -1,8 +1,8 @@
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import React from "react";
 
 interface SchoolCardProps {
-  image: StaticImageData;
+  image: string;
   ht_quote: string;
   school_name: string;
   location: string;
@@ -15,15 +15,15 @@ const SchoolCard: React.FC<SchoolCardProps> = ({
   location,
 }) => {
   return (
-    <div className="rounded-lg transition-shadow duration-300">
-      <div className="relative w-full h-full cursor-pointer overflow-hidden rounded-lg ">
+    <div className="rounded-lg transition-shadow duration-300 ">
+      <div className="relative w-full cursor-pointer overflow-hidden rounded-lg ">
         <Image
           src={image}
           alt={ht_quote}
           width={500}
           height={500}
-          priority
           className="w-full"
+          priority
         />
       </div>
       <h1 className="mt-2 text-md font-bold text-gray-800">{school_name}</h1>
