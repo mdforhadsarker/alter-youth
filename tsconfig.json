@@ -17,6 +17,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/layout/Layout.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/layout/Layout.tsx", "src/assets/icons/HamburgerMenu.js"],
   "exclude": ["node_modules"]
 }

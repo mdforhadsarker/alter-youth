@@ -1,10 +1,17 @@
 import React from "react";
 
-const LogoWhite = () => {
+interface LogoWhiteProps {
+  width?: string | number;
+  height?: string | number;
+  className?: string;
+}
+
+const LogoWhite: React.FC<LogoWhiteProps> = ({ width = 220, height = 40, className }) => {
   return (
     <svg
-      width="220"
-      height="40"
+    className={className}
+      width={width}
+      height={height}
       viewBox="0 0 248 50"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
