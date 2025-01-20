@@ -25,6 +25,8 @@ import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import PrevButton from "./PrevButton";
+import NextButton from "./NextButton";
 
 const CommunityImpactSwiper: React.FC = () => {
   const [swipe, setSwipe] = useState<SwiperType | null>(null);
@@ -52,29 +54,7 @@ const CommunityImpactSwiper: React.FC = () => {
 
   return (
     <div className="w-full relative mt-16">
-      {/* Custom Prev Button */}
-      <button
-        className="hidden md:flex absolute left-14 top-1/2 transform -translate-y-1/2 w-8 h-8 bg-white rounded-full shadow-lg items-center justify-center z-10"
-        onClick={() => swipe?.slidePrev()}
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth={2}
-          stroke="currentColor"
-          className="text-gray-700"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M15 19l-7-7 7-7"
-          />
-        </svg>
-      </button>
-
+      <PrevButton onClick={() => swipe?.slidePrev()} />
       <Swiper
         pagination={{
           dynamicBullets: true,
@@ -99,25 +79,7 @@ const CommunityImpactSwiper: React.FC = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-
-      {/* Custom Next Button */}
-      <button
-        className="hidden md:flex absolute right-14 top-1/2 transform -translate-y-1/2 w-8 h-8 bg-white rounded-full shadow-lg items-center justify-center z-10"
-        onClick={() => swipe?.slideNext()}
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth={2}
-          stroke="currentColor"
-          className="text-gray-700"
-        >
-          <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-        </svg>
-      </button>
+      <NextButton onClick={() => swipe?.slideNext()} />
     </div>
   );
 };

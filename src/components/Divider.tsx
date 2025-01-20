@@ -11,7 +11,7 @@ interface DividerProps {
 
 const Divider: React.FC<DividerProps> = ({
   bgColor = "#f5f5f5",
-  opacity = 0.6,
+  opacity = 0.3,
   marginTop = "mt-5",
   marginBottom = "mb-5",
   borderTop = "border-t-2",

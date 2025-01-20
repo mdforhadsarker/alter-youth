@@ -4,8 +4,7 @@ import TeacherCard from "../../src/components/TeacherCard";
 const Teachers = () => {
   return (
     <div className="mt-16 max-w-screen-xl mx-auto px-4 ">
-      {/* Responsive grid layout */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
         <TeacherCard
           image="/images/headteacher.jpg"
           title="Are you a teacher? Get your students listed on the platform."

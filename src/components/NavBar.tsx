@@ -36,7 +36,7 @@ const Navbar = () => {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 w-full z-50 transition-all py-3 ${
+        className={`fixed top-0 left-0 w-full z-50 transition-all py-3 px-4 ${
           isScrolled
             ? "bg-white text-[#1dc468] shadow-md"
             : "bg-transparent text-white"
@@ -66,7 +66,7 @@ const Navbar = () => {
           </div>
 
           {/* Right side nav items */}
-          <nav className="flex-row gap-4 hidden md:flex">
+          <nav className="flex-row gap-4 hidden md:flex lg:right-4">
             {[
               "about",
               "how-it-works",

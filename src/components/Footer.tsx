@@ -6,7 +6,7 @@ import Image from "next/image";
 const Footer = () => {
   return (
     <footer className="bg-[#f9f9f9] py-6 mt-10">
-      <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between sm:items-end  px-4 lg:px-0">
+      <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between md:items-end  px-4 lg:px-0">
         <div>
           <h4 className="font-semibold mb-2">Learn About AlterYouth</h4>
           <ul className="space-y-1 text-sm">
@@ -27,13 +27,36 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-
+        <div className="border-t mt-2" />
         <div className="mt-4 md:mt-0">
-          <p className="text-sm">Towards a Literate Bangladesh</p>
+          <p className="text-sm ">Towards a Literate Bangladesh</p>
+          <div className="flex space-x-2 md:hidden mt-2 ">
+            <Link href="/#" target="_blank">
+              <Image
+                src={Facebook}
+                alt="facebook"
+                width={500}
+                height={500}
+                priority
+                className="w-4 h-4"
+              />
+            </Link>
+            <Link href="/#" target="_blank">
+              <Image
+                src={Instagram}
+                alt="instagram"
+                width={500}
+                height={500}
+                priority
+                className="w-4 h-4"
+              />
+            </Link>
+          </div>
         </div>
+        <div className="border-t mt-2" />
       </div>
 
-      <div className="max-w-screen-xl mx-auto mt-4 flex justify-between items-center border-t pt-4 px-4 lg:px-0">
+      <div className="max-w-screen-xl mx-auto mt-4 flex justify-between items-center lg:border-t px-4 lg:px-0 lg:py-4">
         <div className="flex flex-col">
           <p className="text-sm">© 2025 AlterYouth Limited</p>
           <div className="flex gap-1">
@@ -53,27 +76,29 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="flex space-x-2">
-          <Link href="/#" target="_blank">
-            <Image
-              src={Facebook}
-              alt="facebook"
-              width={500}
-              height={500}
-              priority
-              className="w-4 h-4"
-            />
-          </Link>
-          <Link href="/#" target="_blank">
-            <Image
-              src={Instagram}
-              alt="instagram"
-              width={500}
-              height={500}
-              priority
-              className="w-4 h-4"
-            />
-          </Link>
+        <div className=" space-x-2 lg:block hidden ">
+          <div className="flex space-x-2">
+            <Link href="/#" target="_blank">
+              <Image
+                src={Facebook}
+                alt="facebook"
+                width={500}
+                height={500}
+                priority
+                className="w-4 h-4"
+              />
+            </Link>
+            <Link href="/#" target="_blank">
+              <Image
+                src={Instagram}
+                alt="instagram"
+                width={500}
+                height={500}
+                priority
+                className="w-4 h-4"
+              />
+            </Link>
+          </div>
         </div>
       </div>
     </footer>

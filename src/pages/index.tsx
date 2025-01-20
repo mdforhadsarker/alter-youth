@@ -6,52 +6,26 @@ import SchoolSwiper from "@/components/SchoolSwiper";
 import ScholarshipEligible from "@/components/ScholarshipEligible";
 import Divider from "@/components/Divider";
 import Teachers from "../../public/images/Teachers";
+import Video from "@/components/Video";
+import Partner from "@/components/Partner";
 
 const Home = () => {
   return (
     <>
       <Hero />
       <UberScholarship />
-      <Divider
-        bgColor="#f5f5f5"
-        opacity={0.2}
-        marginTop="mt-10"
-        marginBottom="mb-5"
-        borderTop="border-t-2"
-      />
+      <Divider />
       <ScholarshipCommunity />
-      <Divider
-        bgColor="#f5f5f5"
-        opacity={0.2}
-        marginTop="mt-10"
-        marginBottom="mb-5"
-        borderTop="border-t-2"
-      />
+      <Divider />
       <CommunityImpact />
-      <Divider
-        bgColor="#f5f5f5"
-        opacity={0.2}
-        marginTop="mt-10"
-        marginBottom="mb-5"
-        borderTop="border-t-2"
-      />
+      <Divider />
       <SchoolSwiper />
-      <Divider
-        bgColor="#f5f5f5"
-        opacity={0.2}
-        marginTop="mt-10"
-        marginBottom="mb-5"
-        borderTop="border-t-2"
-      />
+      <Divider />
       <ScholarshipEligible />
-      <Divider
-        bgColor="#f5f5f5"
-        opacity={0.2}
-        marginTop="mt-10"
-        marginBottom="mb-5"
-        borderTop="border-t-2"
-      />
+      <Divider />
       <Teachers />
+      <Video />
+      <Partner />
     </>
   );
 };

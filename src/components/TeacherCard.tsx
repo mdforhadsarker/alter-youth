@@ -28,8 +28,6 @@ const TeacherCard: React.FC<TeacherCardProps> = ({
           priority
           className="w-full h-full object-cover rounded-lg transition-transform duration-300 group-hover:scale-110"
         />
-        {/* Overlay with fade-in effect */}
-        <div className="absolute inset-0 bg-black/30 transition-opacity duration-300 opacity-0 group-hover:opacity-100"></div>
       </div>
 
       {/* Text content */}
