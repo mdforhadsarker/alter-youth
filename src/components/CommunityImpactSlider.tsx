@@ -116,6 +116,22 @@ const CommunityImpactSlider = () => {
           />
         </svg>
       </button>
+
+      {/* Pagination Dots */}
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+        {Array.from({ length: totalSlides }).map((_, index) => (
+          <span
+            key={index}
+            className={`w-2 h-2 rounded-full bg-black transition-all duration-300 ${
+              index === currentSlide
+                ? "w-3 h-3 bg-white" // Active dot is bigger and white
+                : index === 0 || index === totalSlides - 1
+                ? "w-1 h-1" // First and last dots are smaller
+                : "w-2 h-2"
+            }`}
+          />
+        ))}
+      </div>
     </div>
   );
 };

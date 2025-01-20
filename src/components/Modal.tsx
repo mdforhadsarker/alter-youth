@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { School } from '../utils/types'
+import Divider from "./Divider";
 
 
 interface ModalProps {
@@ -88,7 +89,7 @@ const Modal: React.FC<ModalProps> = ({
                 </div>
               </div>
               <p className="mt-5 text-sm">{selectedSchool?.description}</p>
-              <div className="w-full h-full bg-[#f5f5f] opacity-60 mt-5 mb-5 border-t-2"></div>
+              <Divider bgColor="#f5f5f5" opacity={0.4} marginTop="mt-5" marginBottom="mb-5" borderTop="border-t-2" />
               <div className="flex flex-col mt-4">
                 <div className=" flex flex-row space-x-4">
                   <Image

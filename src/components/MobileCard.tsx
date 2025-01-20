@@ -9,8 +9,7 @@ interface MobileCardProps {
 
 const MobileCard: FC<MobileCardProps> = ({ image, title, description }) => {
   return (
-    <div className="p-4 max-w-sm flex flex-col justify-center items-center w-full ">
-   
+    <div className="max-w-sm flex flex-col justify-center items-start lg:items-center w-full px-4">
       <div className="w-44 h-full overflow-hidden rounded-[1.5rem]">
         <Image
           src={image.src}
@@ -21,8 +20,10 @@ const MobileCard: FC<MobileCardProps> = ({ image, title, description }) => {
           priority
         />
       </div>
-      <h2 className="text-lg font-bold mt-4 text-black">{title}</h2>
-      <p className="text-black mt-2 text-center">{description}</p>
+      <h2 className="text-lg font-bold mt-4 text-black text-left lg:text-center">
+        {title}
+      </h2>
+      <p className="text-black mt-2 text-left lg:text-center">{description}</p>
     </div>
   );
 };

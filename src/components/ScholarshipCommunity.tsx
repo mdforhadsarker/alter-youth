@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import ScholarshipCommunityCard from "./ScholarshipCommunityCard";
 import scholarshipData from "../assets/data/leaderboard.json";
+import { FaArrowRightLong } from "react-icons/fa6";
+import Link from "next/link";
 
 const ScholarshipCommunity = () => {
   const [visibleCount, setVisibleCount] = useState(6);
@@ -19,7 +21,7 @@ const ScholarshipCommunity = () => {
           The Scholarship Community
         </h1>
 
-        <p className="text-center mb-2 mt-3">
+        <p className="text-center mb-2 mt-3 px-0 lg:px-72">
           Despite public primary schools being free of cost in Bangladesh, many
           students still <span className="font-bold">drop out of school</span>
           to work and earn in order to support their families. Your scholarship
@@ -54,6 +56,14 @@ const ScholarshipCommunity = () => {
             </button>
           </div>
         )}
+
+        <Link
+          href="/#"
+          className="md:hidden flex bg-green-500 text-white px-8 py-7 rounded-lg mt-8 items-center justify-center gap-2"
+        >
+          <h1 className="text-sm font-semibold">Join the community</h1>
+          <FaArrowRightLong />
+        </Link>
       </div>
     </section>
   );

@@ -3,6 +3,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import countryImage from "../assets/icons/bd.png";
 
+
 interface Student {
   name: string;
   message: string;
@@ -70,16 +71,14 @@ const ScholarshipCommunityCard: React.FC<ScholarshipCommunityCardProps> = ({
           .slice(0, showAll ? students.length : 5)
           .map((student, idx) => (
             <div key={idx} className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-full overflow-hidden border border-gray-200">
-                <Image
-                  src={student.image}
-                  alt={`${student.name}'s profile`}
-                  width={500}
-                  height={500}
-                  priority
-                  className="object-cover w-full h-full"
-                />
-              </div>
+              <Image
+                src={student.image}
+                alt={`${student.name}'s profile`}
+                className="w-12 h-12 object-cover rounded-full"
+                width={500}
+                height={500}
+              />
+
               <div className="flex flex-col">
                 <h3 className="text-sm font-semibold text-gray-800">
                   {student.name}

@@ -1,5 +1,6 @@
 import React from "react";
-import CommunityImpactSlider from "./CommunityImpactSlider";
+// import CommunityImpactSlider from "./CommunityImpactSlider";
+import CommunityImpactSwiper from "./CommunityImpactSwiper";
 
 const CommunityImpact = () => {
   return (
@@ -15,9 +16,12 @@ const CommunityImpact = () => {
           directly, every month.
         </p>
       </div>
-      <CommunityImpactSlider />
+      {/* <CommunityImpactSlider /> */}
+      <CommunityImpactSwiper />
 
-      <p className="block lg:hidden px-4">
+      
+
+      <p className="block lg:hidden px-5 mt-5 text-md">
         Every scholarship begins with shipping a mobile phone to the parent of
         the student. Then they create their own mobile bank account using that
         using that phone, to start receiving their child&apos;s scholarships

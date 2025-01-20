@@ -24,14 +24,25 @@
   }
 }
 
-/* Global CSS to hide the scrollbar */
 html,
 body {
-  overflow-y: scroll; /* Ensures space for the scrollbar */
-  scrollbar-width: none; /* Firefox */
+  overflow-y: scroll;
+  scrollbar-width: none;
 }
 
 html::-webkit-scrollbar,
 body::-webkit-scrollbar {
-  display: none; /* Safari and Chrome */
+  display: none;
 }
+
+
+.swiper-pagination-bullet {
+  background-color: white !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #fff !important;
+}
+
+
+
