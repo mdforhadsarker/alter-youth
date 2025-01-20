@@ -53,11 +53,9 @@ const Footer = () => {
             </Link>
           </div>
         </div>
-        <div className="border-t mt-2" />
       </div>
-
-      <div className="max-w-screen-xl mx-auto mt-4 flex justify-between items-center lg:border-t px-4 lg:px-0 lg:py-4">
-        <div className="flex flex-col">
+      <div className="max-w-screen-xl mx-auto mt-4 flex justify-between items-center border-t px-4 lg:px-0">
+        <div className="flex flex-col mt-4">
           <p className="text-sm">© 2025 AlterYouth Limited</p>
           <div className="flex gap-1">
             <Link

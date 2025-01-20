@@ -1,4 +1,3 @@
-// Navbar.js (or Navbar.tsx)
 import { useState, useEffect } from "react";
 import LogoWhite from "../assets/icons/LogoWhite";
 import LogoGreen from "../assets/icons/LogoGreen";
@@ -26,7 +25,6 @@ const Navbar = () => {
         setIsScrolled(false);
       }
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -36,10 +34,10 @@ const Navbar = () => {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 w-full z-50 transition-all py-3 ${
+        className={`fixed top-0 left-0 w-full z-50 py-3 transition-all ${
           isScrolled
             ? "bg-white text-[#1dc468] shadow-md"
-            : "bg-transparent text-white"
+            : "bg-transparent text-white" 
         }`}
       >
         <div className="max-w-screen-xl mx-auto flex justify-between items-center">
@@ -55,11 +53,11 @@ const Navbar = () => {
             <div className="flex justify-center absolute left-0 right-0 md:relative">
               {isScrolled ? (
                 <Link href="/">
-                  <LogoGreen className="lg:h-10 h-8 w-full " />
+                  <LogoGreen className="lg:h-10 h-8 w-full" />
                 </Link>
               ) : (
                 <Link href="/">
-                  <LogoWhite className="lg:h-10 h-8 w-full " />
+                  <LogoWhite className="lg:h-10 h-8 w-full" />
                 </Link>
               )}
             </div>

@@ -1,10 +1,29 @@
 const HamburgerMenu = ({ isScrolled, isSidebarOpen, handleMenuClick }) => {
+  const iconColor = isScrolled ? "rgb(29, 196, 104)" : "rgb(255, 255, 255)";
+
+  // Hamburger line styles (common for all)
+  const lineStyle = {
+    background: iconColor,
+    height: "2px",
+    left: "8px",
+    position: "absolute",
+    width: "20px",
+    transition: "0.4s cubic-bezier(0, 0, 0, 1)",
+  };
+
+  // Transformations for mobile
+  const topLineTransform = isSidebarOpen
+    ? "rotate(45deg) translate(4.23px, 4.23px)"
+    : "rotate(0) translate(0, 0)";
+  const middleLineTransform = isSidebarOpen ? "scaleX(0)" : "scaleX(1)";
+  const bottomLineTransform = isSidebarOpen
+    ? "rotate(-45deg) translate(4.23px, -4.23px)"
+    : "rotate(0) translate(0, 0)";
+
   return (
     <button
       onClick={handleMenuClick}
-      className={`text-xl focus:outline-none z-50 transition-all ${
-        isScrolled ? "text-[#1dc468]" : "text-white"
-      }`}
+      className="text-xl focus:outline-none z-50 transition-all"
     >
       {/* Mobile Hamburger icon (with transition) */}
       <div
@@ -22,44 +41,28 @@ const HamburgerMenu = ({ isScrolled, isSidebarOpen, handleMenuClick }) => {
         }}
         tabIndex="0"
       >
+        {/* Top line */}
         <div
           style={{
-            background: isScrolled ? "rgb(29, 196, 104)" : "white",
-            height: "2px",
-            left: "8px",
-            position: "absolute",
-            width: "20px",
+            ...lineStyle,
             top: "12px",
-            transition: "0.4s cubic-bezier(0, 0, 0, 1)",
-            transform: isSidebarOpen
-              ? "rotate(45deg) translate(4.23px, 4.23px)"
-              : "rotate(0) translate(0, 0)",
+            transform: topLineTransform,
           }}
         ></div>
+        {/* Middle line */}
         <div
           style={{
-            background: isScrolled ? "rgb(29, 196, 104)" : "white",
-            height: "2px",
-            left: "8px",
-            position: "absolute",
-            width: "20px",
+            ...lineStyle,
             top: "18px",
-            transition: "0.2s cubic-bezier(0, 0, 0, 1)",
-            transform: isSidebarOpen ? "scaleX(0)" : "scaleX(1)",
+            transform: middleLineTransform,
           }}
         ></div>
+        {/* Bottom line */}
         <div
           style={{
-            background: isScrolled ? "rgb(29, 196, 104)" : "white",
-            height: "2px",
-            left: "8px",
-            position: "absolute",
-            width: "20px",
+            ...lineStyle,
             top: "24px",
-            transition: "0.4s cubic-bezier(0, 0, 0, 1)",
-            transform: isSidebarOpen
-              ? "rotate(-45deg) translate(4.23px, -4.23px)"
-              : "rotate(0) translate(0, 0)",
+            transform: bottomLineTransform,
           }}
         ></div>
       </div>
@@ -75,7 +78,6 @@ const HamburgerMenu = ({ isScrolled, isSidebarOpen, handleMenuClick }) => {
           cursor: "pointer",
           height: "36px",
           position: "relative",
-
           transition: "none",
           userSelect: "none",
           width: "36px",
@@ -83,33 +85,24 @@ const HamburgerMenu = ({ isScrolled, isSidebarOpen, handleMenuClick }) => {
         }}
         tabIndex="0"
       >
+        {/* Top line */}
         <div
           style={{
-            background: isScrolled ? "rgb(29, 196, 104)" : "white",
-            height: "2px",
-            left: "8px",
-            position: "absolute",
-            width: "20px",
+            ...lineStyle,
             top: "12px",
           }}
         ></div>
+        {/* Middle line */}
         <div
           style={{
-            background: isScrolled ? "rgb(29, 196, 104)" : "white",
-            height: "2px",
-            left: "8px",
-            position: "absolute",
-            width: "20px",
+            ...lineStyle,
             top: "18px",
           }}
         ></div>
+        {/* Bottom line */}
         <div
           style={{
-            background: isScrolled ? "rgb(29, 196, 104)" : "white",
-            height: "2px",
-            left: "8px",
-            position: "absolute",
-            width: "20px",
+            ...lineStyle,
             top: "24px",
           }}
         ></div>

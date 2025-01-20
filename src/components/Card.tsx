@@ -14,7 +14,7 @@ const Card = () => {
   };
 
   return (
-    <div className="bg-white rounded-lg p-6 shadow-lg w-full sm:max-w-md md:max-w-lg lg:max-w-xl mx-auto">
+    <div className="bg-white rounded-md p-4 shadow-lg w-full sm:max-w-md md:max-w-lg lg:max-w-xl mx-auto">
       <h1 className="text-black font-bold text-lg mb-6 text-left">
         Join the <span className="text-[#1dc468]">#alteryouthrevolution</span>
       </h1>
@@ -62,27 +62,27 @@ const Card = () => {
       </form>
 
       {/* Scholarship Controls */}
-      <div className="mt-6 ">
-        <label className="block text-black font-medium mb-2 items-start">
+      <div className="mt-6 flex flex-col justify-start items-start">
+        <label className="block text-black font-medium mb-2 ">
           Number of Scholarships
         </label>
-        <div className="flex items-center justify-between gap-4">
+        <div className="w-full flex items-center justify-between gap-8">
           {/* Increment/Decrement Buttons */}
           <div className="flex items-center bg-gray-100 rounded-lg">
             <button
               onClick={decrementScholarships}
               type="button"
-              className="px-4 py-2 bg-gray-200 text-gray-700 rounded-l-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-[#1dc468]"
+              className="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-[#1dc468]"
             >
               −
             </button>
-            <span className="px-6 py-2 text-lg font-medium text-black">
+            <span className="px-3 py-2 text-lg font-medium text-black">
               {scholarships}
             </span>
             <button
               onClick={incrementScholarships}
               type="button"
-              className="px-4 py-2 bg-[#1dc468] text-white rounded-r-lg hover:bg-[#17b957] focus:outline-none focus:ring-2 focus:ring-[#1dc468]"
+              className="px-4 py-2 bg-[#1dc468] text-white rounded-lg hover:bg-[#17b957] focus:outline-none focus:ring-2 focus:ring-[#1dc468]"
             >
               +
             </button>
