@@ -45,7 +45,7 @@ const UberScholarship = () => {
         </div>
 
         {/* Swiper for Mobile View */}
-        <div className="w-full mt-5 sm:hidden ">
+        <div className="w-full mt-5 sm:hidden pb-8">
           <Swiper spaceBetween={10} slidesPerView={1.4} loop>
             <SwiperSlide>
               <MobileCard
@@ -72,7 +72,7 @@ const UberScholarship = () => {
         </div>
 
         {/* Desktop/Flexbox Layout */}
-        <div className="hidden sm:flex gap-5 mt-10">
+        <div className="hidden sm:flex gap-5 mt-10 pb-8">
           <MobileCard
             image={firstImage}
             title="Transfer directly"

@@ -40,8 +40,10 @@ const Hero: FC = () => {
         </div>
 
         {/* Card Section */}
-        <div className="flex justify-center items-center w-full md:w-auto mb-10 md:mb-16">
-          <Card />
+        <div className="flex justify-center items-center w-full md:w-auto mb-10 md:mb-16 ">
+          <div className="">
+            <Card />
+          </div>
         </div>
       </div>
     </section>
