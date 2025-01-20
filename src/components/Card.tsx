@@ -6,11 +6,15 @@ const Card = () => {
   const scholarshipPrice = 1650;
 
   const incrementScholarships = () => {
-    setScholarships((prev) => prev + 1);
+    if (scholarships < 4) {
+      setScholarships((prev) => prev + 1);
+    }
   };
 
   const decrementScholarships = () => {
-    setScholarships((prev) => (prev > 1 ? prev - 1 : 1));
+    if (scholarships > 1) {
+      setScholarships((prev) => prev - 1);
+    }
   };
 
   return (
@@ -72,7 +76,12 @@ const Card = () => {
             <button
               onClick={decrementScholarships}
               type="button"
-              className="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-[#1dc468]"
+              disabled={scholarships <= 1}
+              className={`px-4 py-2 text-gray-700 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-[#1dc468] ${
+                scholarships <= 1
+                  ? "bg-gray-200 cursor-not-allowed"
+                  : "bg-gray-200"
+              }`}
             >
               −
             </button>
@@ -82,7 +91,12 @@ const Card = () => {
             <button
               onClick={incrementScholarships}
               type="button"
-              className="px-4 py-2 bg-[#1dc468] text-white rounded-lg hover:bg-[#17b957] focus:outline-none focus:ring-2 focus:ring-[#1dc468]"
+              disabled={scholarships >= 4}
+              className={`px-4 py-2 text-white rounded-lg hover:bg-[#17b957] focus:outline-none focus:ring-2 focus:ring-[#1dc468] ${
+                scholarships >= 4
+                  ? "bg-[#1dc468] cursor-not-allowed"
+                  : "bg-[#1dc468]"
+              }`}
             >
               +
             </button>

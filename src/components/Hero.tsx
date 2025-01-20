@@ -29,8 +29,8 @@ const Hero: FC = () => {
 
       {/* Content */}
       <div className=" pt-96 lg:pt-0 relative z-10 flex flex-col items-left md:flex-row max-w-screen-xl mx-auto justify-between h-full text-center md:text-left text-white px-6 md:px-20">
-        <div className="flex flex-col w-full md:w-auto md:flex-1 justify-end md:justify-center mb-10 md:mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4 text-left">
+        <div className="flex flex-col w-full md:flex-1 justify-end md:justify-center mb-10 md:mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold mb-4 text-left ">
             Start your scholarship
           </h1>
           <h3 className="text-base md:text-lg text-left">
